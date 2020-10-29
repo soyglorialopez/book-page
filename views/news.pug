@@ -1,0 +1,20 @@
+extends layout.pug
+block content
+ div.pt-5
+  .row.text-center
+   each item in list
+      .col-sm-12.col-md-6.pb-3
+         .card(style='max-width: 440px;')
+          .row.no-gutters
+            .col-md-4
+               img.card-img(src= item.file)
+            .col-md-8
+              .card-body
+                h5.card-title= item.title
+                p.card-text
+                 span= item.label
+                p.card-text
+                  small.text-muted= item.date
+                  br 
+                  span 
+                   a.stretched-link(href= '/article/' + item.id) Leer Noticia

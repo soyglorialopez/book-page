@@ -1,0 +1,26 @@
+extends layout.pug
+block content
+ .container.mt-4
+   .card.mb-3
+    .card-header
+      h3 Crear Nuevo Articulo
+    .card-body
+      .row
+        .col
+          form(method='POST' action='/new-article' enctype='multipart/form-data')
+            .form-group
+              input#title.form-control(type='text' name='title' placeholder='Ingrese el título' )
+              input#label.form-control(type='text' name='label' placeholder='Ingrese la etiqueta' required='')
+              input#title.form-control(type='text' name='author' placeholder='Ingrese el author' required='')
+
+            .form-group
+              label(for='description') Descripci&oacute;n
+              textarea#description.form-control(name='text' placeholder='Ingrese la descripción' required='')
+            .form-group
+              input(type='file' name='image' en='')
+            .text-center.mt-5
+              button.btn.btn-primary(type='submit') Crear Articulo
+
+
+
+ 

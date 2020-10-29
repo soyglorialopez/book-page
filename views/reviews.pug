@@ -1,0 +1,17 @@
+extends layout.pug
+block content
+  .rows.mt-5
+   each item in list
+    .col-sm-6-md-3.pb-5
+     div
+      .text-center
+        img.size.rounded(width='200' height='250' src= item.file )
+        p
+         span.strong= item.title
+         br 
+         span= item.date
+         br
+         span Reseña escrita por #{item.autor}
+         br 
+         span 
+            a.stretched-link(href= '/article/' + item.id) Leer Reseña

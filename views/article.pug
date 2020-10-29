@@ -1,0 +1,17 @@
+extends layout.pug
+block content
+
+  .container.p-5
+    .text-center
+        img.size.rounded( width='250' height='250' src= file)
+    .text-center
+      h2= title
+      h6    
+         span= date
+         br
+         span= label
+         br
+         span   Articulo escrita por #{autor}
+         br
+    div.pt-4
+      p= text
