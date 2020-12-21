@@ -3,7 +3,7 @@ const app = express();
 const router = require('./router.js');
 const path = require('path');
 const db = require('./db/config');
-const url = 'mongodb+srv://user:user1234@cluster0-geb9p.mongodb.net/<page-book>?retryWrites=true&w=majority'
+const url = 'mongodb+srv://username:passwordcluster0-geb9p.mongodb.net/<page-book>?retryWrites=true&w=majority'
 const error = require('./network/error');
 
 db(url);
